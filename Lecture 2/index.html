@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Video Game Trivia!</title>
+<link rel="stylesheet" type="text/css" href="TriviaQuiz.css">
+</head>
+<body>
+
+<h1>Video Game Trivia</h1>
+<h2>How much do you really know about video games? Test your knowledge with this fun quiz to find out!</h2>
+
+<script>
+  function newFunction(){
+    document.getElementById("answer").innerHTML= "Wrong";
+}
+
+  function newFunction1(){
+      document.getElementById("answer").innerHTML= "Correct!";
+  }
+
+  function newFunction2(){
+    document.getElementById("answer").innerHTML= "Wrong";
+  }
+</script>
+
+<div id="quiz">
+
+
+<h3>You’ve probably heard of the Atari game system, but what does “Atari” mean?</h3>
+<div class="btn-group">
+
+      <button onclick="newFunction()">  Hope </button>
+
+
+      <button onclick="newFunction1()"> Success</button>
+
+      <button onclick="newFunction2()"> Fun </button>
+
+</div>
+
+<p id="answer"></p>
+
+
+
+<h3>What is Mario’s full name?</h3>
+
+<div class="btn-group">
+      <button> Mario Jumpman Mario </button>
+
+      <button>Mario Luigi Mario </button>
+
+
+      <button>Mario Mario</button>
+
+</div>
+
+<p id="answer2"</p>
+
+<h3>Who was the first Pokemon ever created?</h3>
+
+<div class="btn-group">
+    <button>Pikachu </button>
+
+    <button> Rhydon </button>
+
+    <button> Bulbasaur</button>
+
+</div>
+
+<p id="answer3"></p>
+
+<h3>What year was the PS4 first released?</h3>
+
+    <div class="btn-group">
+
+      <button>2011 </button>
+
+      <button> 2013 </button>
+
+      <button>2014</button>
+
+    </div>
+
+<p id="answer4"</p>
+
+<h3>What was the codename for the Nintendo Gamecube?</h3>
+
+    <div class="btn-group">
+
+      <button> Whale </button>
+
+      <button>Sea Turtle </button>
+
+      <button>Dolphin </button>.
+
+    </div>
+
+<p id="answer5"</p>
+
+</div>
+
+</body>
+</html>

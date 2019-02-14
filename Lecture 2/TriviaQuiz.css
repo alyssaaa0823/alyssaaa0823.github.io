@@ -1,0 +1,36 @@
+body {
+background-color: #809fff
+
+}
+
+h1{
+	color: #ffff99;
+	text-align: center;
+	font-family: Futura, sans-serif;
+	font-size: 60px;
+	background-color: #000066;
+}
+
+h2{
+	color: #ffff99;
+	font-family: Futura, sans-serif;
+}
+
+.btn-group button {
+  background-color: #4CAF50; /* Green background */
+  border: 1px solid green; /* Green border */
+  color: white; /* White text */
+  padding: 10px 24px; /* Some padding */
+  cursor: pointer; /* Pointer/hand icon */
+  width: 15%; /* Set a width if needed */
+  display: block; /* Make the buttons appear below each other */
+}
+
+.btn-group button:not(:last-child) {
+  border-bottom: none; /* Prevent double borders */
+}
+
+/* Add a background color on hover */
+.btn-group button:hover {
+  background-color: #3e8e41;
+}

@@ -1,0 +1,101 @@
+
+<html>
+
+<head>
+<style>
+
+body {
+	background-color: #ffffff;
+}
+h1 {
+  width: 50%;
+  font-family: "Futura", sans-serif;
+  font-size: 150px;
+}
+
+button {
+  background-color:  #000000; /* Green */
+  border: none;
+  color: white;
+  width: 25%;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+}
+
+.moodStatement {
+  width: 50%;
+  font-size: 50px;
+  margin-top: 50px;
+  font-family: "Georgia", serif;
+}
+
+</style>
+
+</head>
+
+<body>
+
+	<h1>Mood Ring</h1>
+
+	<button id="moodButton" onclick="changeMood()" value="0">What's my Mood?</button>
+
+	<div id="moodStatement">The Mood Ring that Kind of Works!</div>
+
+
+<script>
+text =""
+function changeMood(){
+
+	button = document.getElementById("moodButton")
+	if (button.value == '0') {
+		text ="Cool as a cucumber";
+		document.getElementById('moodStatement').innerHTML = text
+		document.body.style.backgroundColor = "#b3ecff";
+		button.value = '1';
+	}
+
+	else if (button.value == '1') {
+		text = "Happy camper";
+		document.getElementById('moodStatement').innerHTML = text;
+				document.body.style.backgroundColor = "#ffff99";
+		button.value = '2';
+	}
+
+else if (button.value =='2') {
+  text = "Angry boi";
+  	document.getElementById('moodStatement').innerHTML = text
+    	document.body.style.backgroundColor = "#ff1a1a";
+      button.value = '3';
+}
+
+else if (button.value == '3') {
+text = "Kinda jealous"
+	document.getElementById('moodStatement').innerHTML = text
+  document.body.style.backgroundColor = "#99ff99";
+  button.value = '4';
+}
+
+else if (button.value == '4') {
+text = "Embarrassed about something that happened 5 years ago"
+	document.getElementById('moodStatement').innerHTML = text
+  document.body.style.backgroundColor = "#ff80df";
+  button.value = '5';
+}
+
+else if (button.value == '5') {
+  text = "Stressed out"
+  	document.getElementById('moodStatement').innerHTML = text
+    document.body.style.backgroundColor = "#ffa31a";
+    button.value = '6';
+}
+ else if (button.value == '6')
+ button.value = '0'
+}
+
+
+</script>
+</body>
+</html>

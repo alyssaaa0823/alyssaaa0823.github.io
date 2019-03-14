@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title> Guess the Cat!</title>
+<link rel="stylesheet" type="text/css" href="mystyle.css">
+  <head>
+
+
+
+<body onload="startUp()">
+  <script>
+
+    var randomWordArr = ["abyssinnian", "alley","angora","bengal tiger","bobcat","burmese","bombay","british shorthair","calico","caracal","cougar","cheetah","egyptian mau","feline","ginger","himalayan","longhair","lynx","leopard","ragdoll","sphynx"];
+    var randomWord = randomWordArr[Math.floor(Math.random() * randomWordArr.length)];
+
+    var s;
+    var count = 0
+    var answerArray = [];
+
+    function startUp()
+    {
+      for (var i = 0; i < randomWord.length; i++)
+      {
+        answerArray[i] = "_";
+      }
+
+// puts letters in a string
+
+      s = answerArray.join(" ");
+      document.getElementById("answer").innerHTML = s;
+    }
+
+    function Letter()
+    {
+      var letter = document.getElementById("letter").value;
+      if (letter.length !== 1) {
+      alert("Please enter a single letter."); }
+    else if (letter.length == 1)
+      {
+        for (var i = 0; i < randomWord.length; i++)
+        {
+          //if the randomword has a letter that you typed in
+          if (randomWord[i] === letter)
+          {
+            //then assign it to letter
+            answerArray[i] = letter;
+          }
+
+        }
+        count++;
+        document.getElementById("counter").innerHTML = "No of Guesses: " + count;
+        document.getElementById("answer").innerHTML = answerArray.join(" ");
+
+    }
+
+    if(count == 6)
+    {
+     alert("You've been using a lot of guesses")
+
+    }
+
+    if(count == 10)
+    document.getElementById("stat").innerHTML = "You're not very good at this game"
+  }
+
+setTimeout(function(){ alert("Time is up"); }, 120000);
+
+    </script>
+
+  <h1>Guess The Cat!</h1>
+  <h2> Learn about different breeds of cats by playing this simple guessing game</h2>
+  <p>Type in a letter and click "Guess". If you guess a letter correctly then the spaces with that letter will be filled in. You have 2 minutes to figure it out before time is up!
+    Refresh to start a new game.
+  </p>
+  <div class = box>
+  <input id="letter" type="text">
+  <input type="button" value="Guess" onClick="Letter()"/>
+<div class = answer>
+  <p id="answer"></p>
+  </div>
+  <p id="counter"></p>
+  <p id="stat"></p>
+  </div>
+
+  <img src="cat.png" alt="Cat">
+  </body>
+
+  </html>
